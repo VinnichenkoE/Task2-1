@@ -1,16 +1,12 @@
 package com.vinnichenko.task1.model.dao;
 
 import com.vinnichenko.task1.exception.DaoException;
-import com.vinnichenko.task1.model.entity.Appliances;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.List;
 
-public interface AppliancesDao {
+public interface ApplianceDao {
 
     List<String> findByType(String type) throws DaoException;
 

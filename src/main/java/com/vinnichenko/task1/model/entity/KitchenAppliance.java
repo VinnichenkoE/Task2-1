@@ -1,11 +1,11 @@
 package com.vinnichenko.task1.model.entity;
 
-public abstract class KitchenAppliances extends ElectricalAppliance {
+public abstract class KitchenAppliance extends ElectricalAppliance {
     private double weight;
     private double height;
     private double width;
 
-    public KitchenAppliances(double powerConsumption, double weight, double height, double width) {
+    public KitchenAppliance(double powerConsumption, double weight, double height, double width) {
         super(powerConsumption);
         this.weight = weight;
         this.height = height;
@@ -42,7 +42,7 @@ public abstract class KitchenAppliances extends ElectricalAppliance {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
 
-        KitchenAppliances that = (KitchenAppliances) o;
+        KitchenAppliance that = (KitchenAppliance) o;
 
         if (Double.compare(that.weight, weight) != 0) return false;
         if (Double.compare(that.height, height) != 0) return false;

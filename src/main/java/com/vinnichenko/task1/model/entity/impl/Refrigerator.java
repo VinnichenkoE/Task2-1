@@ -1,8 +1,8 @@
 package com.vinnichenko.task1.model.entity.impl;
 
-import com.vinnichenko.task1.model.entity.KitchenAppliances;
+import com.vinnichenko.task1.model.entity.KitchenAppliance;
 
-public class Refrigerator extends KitchenAppliances {
+public class Refrigerator extends KitchenAppliance {
 
     private double freezerCapacity;
     private double overallCapacity;

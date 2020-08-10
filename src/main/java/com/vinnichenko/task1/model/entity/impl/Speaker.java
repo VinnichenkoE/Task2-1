@@ -2,14 +2,14 @@ package com.vinnichenko.task1.model.entity.impl;
 
 import com.vinnichenko.task1.model.entity.ElectricalAppliance;
 
-public class Speakers extends ElectricalAppliance {
+public class Speaker extends ElectricalAppliance {
 
     private int numberOfSpeakers;
     private double startFrequencyRange;
     private double endFrequencyRange;
     private double cordLength;
 
-    public Speakers(double powerConsumption, int numberOfSpeakers, double startFrequencyRange, double endFrequencyRange, double cordLength) {
+    public Speaker(double powerConsumption, int numberOfSpeakers, double startFrequencyRange, double endFrequencyRange, double cordLength) {
         super(powerConsumption);
         this.numberOfSpeakers = numberOfSpeakers;
         this.startFrequencyRange = startFrequencyRange;
@@ -55,7 +55,7 @@ public class Speakers extends ElectricalAppliance {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
 
-        Speakers speakers = (Speakers) o;
+        Speaker speakers = (Speaker) o;
 
         if (numberOfSpeakers != speakers.numberOfSpeakers) return false;
         if (Double.compare(speakers.startFrequencyRange, startFrequencyRange) != 0)

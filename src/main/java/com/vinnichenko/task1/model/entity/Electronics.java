@@ -1,6 +1,6 @@
 package com.vinnichenko.task1.model.entity;
 
-public abstract class Electronics implements Appliances {
+public abstract class Electronics implements Appliance {
     private double batteryCapacity;
     private int displayInches;
     private int memoryRom;

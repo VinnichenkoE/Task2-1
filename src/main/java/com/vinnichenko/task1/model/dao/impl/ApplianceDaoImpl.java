@@ -1,7 +1,7 @@
 package com.vinnichenko.task1.model.dao.impl;
 
 import com.vinnichenko.task1.exception.DaoException;
-import com.vinnichenko.task1.model.dao.AppliancesDao;
+import com.vinnichenko.task1.model.dao.ApplianceDao;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
-public class AppliancesDaoImpl implements AppliancesDao {
+public class ApplianceDaoImpl implements ApplianceDao {
 
     @Override
     public List<String> findByType(String type) throws DaoException {

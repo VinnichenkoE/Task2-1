@@ -1,8 +1,8 @@
 package com.vinnichenko.task1.model.entity.impl;
 
-import com.vinnichenko.task1.model.entity.KitchenAppliances;
+import com.vinnichenko.task1.model.entity.KitchenAppliance;
 
-public class Oven extends KitchenAppliances {
+public class Oven extends KitchenAppliance {
 
     private double capacity;
     private double depth;
