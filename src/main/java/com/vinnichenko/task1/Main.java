@@ -1,4 +1,4 @@
-package com.vinnichenko;
+package com.vinnichenko.task1;
 
 import com.vinnichenko.task1.controller.ApplianceController;
 import com.vinnichenko.task1.exception.ServiceException;
