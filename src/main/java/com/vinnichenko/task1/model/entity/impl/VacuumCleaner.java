@@ -61,20 +61,28 @@ public class VacuumCleaner extends ElectricalAppliance {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
         VacuumCleaner that = (VacuumCleaner) o;
-
-        if (Double.compare(that.motorSpeedRegulation, motorSpeedRegulation) != 0)
+        if (Double.compare(that.motorSpeedRegulation, motorSpeedRegulation) != 0) {
             return false;
-        if (Double.compare(that.cleaningWidth, cleaningWidth) != 0)
+        }
+        if (Double.compare(that.cleaningWidth, cleaningWidth) != 0) {
             return false;
-        if (filterType != null ? !filterType.equals(that.filterType) : that.filterType != null)
+        }
+        if (filterType != null ? !filterType.equals(that.filterType) : that.filterType != null) {
             return false;
-        if (bagType != null ? !bagType.equals(that.bagType) : that.bagType != null)
+        }
+        if (bagType != null ? !bagType.equals(that.bagType) : that.bagType != null) {
             return false;
+        }
         return wandType != null ? wandType.equals(that.wandType) : that.wandType == null;
     }
 

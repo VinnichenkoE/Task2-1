@@ -1,6 +1,7 @@
 package com.vinnichenko.task1.model.entity;
 
 public abstract class Electronics implements Appliance {
+
     private double batteryCapacity;
     private int displayInches;
     private int memoryRom;
@@ -37,14 +38,19 @@ public abstract class Electronics implements Appliance {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Electronics that = (Electronics) o;
-
-        if (Double.compare(that.batteryCapacity, batteryCapacity) != 0)
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
             return false;
-        if (displayInches != that.displayInches) return false;
+        }
+        Electronics that = (Electronics) o;
+        if (Double.compare(that.batteryCapacity, batteryCapacity) != 0) {
+            return false;
+        }
+        if (displayInches != that.displayInches) {
+            return false;
+        }
         return memoryRom == that.memoryRom;
     }
 

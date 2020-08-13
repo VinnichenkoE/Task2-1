@@ -41,15 +41,22 @@ public class Laptop extends Electronics {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-
-        Laptop laptop = (Laptop) o;
-
-        if (Double.compare(laptop.systemMemory, systemMemory) != 0)
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
             return false;
-        if (Double.compare(laptop.cpu, cpu) != 0) return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
+        Laptop laptop = (Laptop) o;
+        if (Double.compare(laptop.systemMemory, systemMemory) != 0) {
+            return false;
+        }
+        if (Double.compare(laptop.cpu, cpu) != 0) {
+            return false;
+        }
         return OS != null ? OS.equals(laptop.OS) : laptop.OS == null;
     }
 

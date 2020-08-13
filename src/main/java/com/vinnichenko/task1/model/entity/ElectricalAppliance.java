@@ -1,6 +1,7 @@
 package com.vinnichenko.task1.model.entity;
 
 public abstract class ElectricalAppliance implements Appliance {
+
     private double powerConsumption;
 
     public ElectricalAppliance(double powerConsumption) {
@@ -17,11 +18,13 @@ public abstract class ElectricalAppliance implements Appliance {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         ElectricalAppliance that = (ElectricalAppliance) o;
-
         return Double.compare(that.powerConsumption, powerConsumption) == 0;
     }
 

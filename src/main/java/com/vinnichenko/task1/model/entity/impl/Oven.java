@@ -16,13 +16,19 @@ public class Oven extends KitchenAppliance {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
         Oven oven = (Oven) o;
-
-        if (Double.compare(oven.capacity, capacity) != 0) return false;
+        if (Double.compare(oven.capacity, capacity) != 0) {
+            return false;
+        }
         return Double.compare(oven.depth, depth) == 0;
     }
 

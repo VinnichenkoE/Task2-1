@@ -1,6 +1,7 @@
 package com.vinnichenko.task1.model.entity;
 
 public abstract class KitchenAppliance extends ElectricalAppliance {
+
     private double weight;
     private double height;
     private double width;
@@ -38,14 +39,22 @@ public abstract class KitchenAppliance extends ElectricalAppliance {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
         KitchenAppliance that = (KitchenAppliance) o;
-
-        if (Double.compare(that.weight, weight) != 0) return false;
-        if (Double.compare(that.height, height) != 0) return false;
+        if (Double.compare(that.weight, weight) != 0) {
+            return false;
+        }
+        if (Double.compare(that.height, height) != 0) {
+            return false;
+        }
         return Double.compare(that.width, width) == 0;
     }
 

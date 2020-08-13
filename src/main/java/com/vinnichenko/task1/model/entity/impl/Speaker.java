@@ -51,17 +51,25 @@ public class Speaker extends ElectricalAppliance {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
         Speaker speakers = (Speaker) o;
-
-        if (numberOfSpeakers != speakers.numberOfSpeakers) return false;
-        if (Double.compare(speakers.startFrequencyRange, startFrequencyRange) != 0)
+        if (numberOfSpeakers != speakers.numberOfSpeakers) {
             return false;
-        if (Double.compare(speakers.endFrequencyRange, endFrequencyRange) != 0)
+        }
+        if (Double.compare(speakers.startFrequencyRange, startFrequencyRange) != 0) {
             return false;
+        }
+        if (Double.compare(speakers.endFrequencyRange, endFrequencyRange) != 0) {
+            return false;
+        }
         return Double.compare(speakers.cordLength, cordLength) == 0;
     }
 

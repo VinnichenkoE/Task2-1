@@ -31,14 +31,19 @@ public class Refrigerator extends KitchenAppliance {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-
-        Refrigerator that = (Refrigerator) o;
-
-        if (Double.compare(that.freezerCapacity, freezerCapacity) != 0)
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
             return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
+        Refrigerator that = (Refrigerator) o;
+        if (Double.compare(that.freezerCapacity, freezerCapacity) != 0) {
+            return false;
+        }
         return Double.compare(that.overallCapacity, overallCapacity) == 0;
     }
 

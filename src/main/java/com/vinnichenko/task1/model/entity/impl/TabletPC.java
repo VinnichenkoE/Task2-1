@@ -31,14 +31,19 @@ public class TabletPC extends Electronics {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-
-        TabletPC tabletPC = (TabletPC) o;
-
-        if (Double.compare(tabletPC.flashMemoryCapacity, flashMemoryCapacity) != 0)
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
             return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
+        TabletPC tabletPC = (TabletPC) o;
+        if (Double.compare(tabletPC.flashMemoryCapacity, flashMemoryCapacity) != 0) {
+            return false;
+        }
         return color != null ? color.equals(tabletPC.color) : tabletPC.color == null;
     }
 
